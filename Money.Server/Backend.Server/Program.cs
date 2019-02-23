@@ -14,9 +14,9 @@ namespace Backend.Server
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-        }
+        //static void Main(string[] args)
+        //{
+        //}
         // State object for reading client data asynchronously  
         public class StateObject {  
             // Client  socket.  
