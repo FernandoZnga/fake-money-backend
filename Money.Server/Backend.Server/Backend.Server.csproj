@@ -45,9 +45,20 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlSerialization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backend.Data\Backend.Data.csproj">
+      <Project>{abaf6257-1179-4649-be9e-129e46da337a}</Project>
+      <Name>Backend.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Backend.Domain\Backend.Domain.csproj">
+      <Project>{350146d6-7567-4c50-b01f-562a2d3d596c}</Project>
+      <Name>Backend.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

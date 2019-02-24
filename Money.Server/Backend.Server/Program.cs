@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-
-using System;  
-using System.Net;  
-using System.Net.Sockets;  
-using System.Text;  
-using System.Threading; 
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
 
 namespace Backend.Server
 {
@@ -113,9 +107,9 @@ namespace Backend.Server
                         // All the data has been read from the   
                         // client. Display it on the console.  
                         Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",  
-                            content.Length, content );  
+                            content.Length, content );
                         // Echo the data back to the client.  
-                        Send(handler, content);  
+                        Send(handler, "Response: " + content);  
                     } else {  
                         // Not all data received. Get more.  
                         handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0,  
@@ -124,7 +118,7 @@ namespace Backend.Server
                 }  
             }  
         
-            private static void Send(Socket handler, String data) {  
+            private static void Send(Socket handler, string data) {  
                 // Convert the string data to byte data using ASCII encoding.  
                 byte[] byteData = Encoding.ASCII.GetBytes(data);  
         

@@ -1,0 +1,7 @@
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\bin\Debug\Backend.Domain.exe.config
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\bin\Debug\Backend.Domain.exe
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\bin\Debug\Backend.Domain.pdb
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\obj\Debug\Backend.Domain.csprojAssemblyReference.cache
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\obj\Debug\Backend.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\obj\Debug\Backend.Domain.exe
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Domain\obj\Debug\Backend.Domain.pdb
