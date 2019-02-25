@@ -218,6 +218,14 @@
     <Compile Include="Migrations\20190225000350_init.designer.cs">
       <DependentUpon>20190225000350_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190225062207_CreatedAt-On-RawData.cs" />
+    <Compile Include="Migrations\20190225062207_CreatedAt-On-RawData.designer.cs">
+      <DependentUpon>20190225062207_CreatedAt-On-RawData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190225063655_User-CreditCard-Tables.cs" />
+    <Compile Include="Migrations\20190225063655_User-CreditCard-Tables.designer.cs">
+      <DependentUpon>20190225063655_User-CreditCard-Tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="MyLoggerProvider.cs" />
     <Compile Include="Program.cs" />

@@ -159,3 +159,5 @@ C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend
 C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Server\obj\Debug\Backend.Server.exe.config
 C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Server\bin\Debug\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Server\bin\Debug\Microsoft.EntityFrameworkCore.Design.xml
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Server\obj\Debug\Backend.Server.Server.resources
+C:\Users\ferna\source\repos\FernandoZnga\fake-money-backend\Money.Server\Backend.Server\obj\Debug\Backend.Server.csproj.GenerateResource.cache

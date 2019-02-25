@@ -10,7 +10,7 @@ namespace Backend.Server
 {
     public class Action
     {
-        private static DatabaseContext _context = new DatabaseContext();
+        private static readonly DatabaseContext _context = new DatabaseContext();
 
         public bool InsertRawData(RawData rawData)
         {

@@ -9,6 +9,8 @@ namespace Backend.Data
         public ILoggerFactory MyLoggerFactory { get; private set; }
 
         public DbSet<RawData> RawText { get; set; }
+        public DbSet<CreditCard> CreditCards { get; set; }
+        public DbSet<User> Users { get; set; }
 
         /*
                 public DbSet<Samurai> Samurais { get; set; }
