@@ -3,6 +3,7 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using Backend.Domain;
 
 namespace Backend.Server
 {
@@ -108,6 +109,12 @@ namespace Backend.Server
                         // client. Display it on the console.  
                         Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",  
                             content.Length, content );
+                        RawData rawData = new RawData();
+                        // Insert on Database the text received from Client
+                        rawData.XmlTextFromClient = content;
+                        Action action = new Action();
+                        action.InsertRawData(rawData);
+
                         // Echo the data back to the client.  
                         Send(handler, "Response: " + content);  
                     } else {  
