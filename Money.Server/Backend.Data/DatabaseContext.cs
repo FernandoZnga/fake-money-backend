@@ -11,6 +11,7 @@ namespace Backend.Data
         public DbSet<RawData> RawText { get; set; }
         public DbSet<CreditCard> CreditCards { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<CreditCardType> CreditCardTypes { get; set; }
 
         /*
                 public DbSet<Samurai> Samurais { get; set; }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20190225063655_User-CreditCard-Tables")]
-    partial class UserCreditCardTables
+    [Migration("20190225073659_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -40,6 +40,28 @@ namespace Backend.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("CreditCards");
+                });
+
+            modelBuilder.Entity("Backend.Domain.CreditCardType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<int>("CreditCardId");
+
+                    b.Property<float>("Limit");
+
+                    b.Property<string>("Type");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreditCardId")
+                        .IsUnique();
+
+                    b.ToTable("CreditCardTypes");
                 });
 
             modelBuilder.Entity("Backend.Domain.RawData", b =>
@@ -79,6 +101,14 @@ namespace Backend.Data.Migrations
                     b.HasOne("Backend.Domain.User", "User")
                         .WithMany("CreditCards")
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Backend.Domain.CreditCardType", b =>
+                {
+                    b.HasOne("Backend.Domain.CreditCard", "CreditCard")
+                        .WithOne("CreditCardType")
+                        .HasForeignKey("Backend.Domain.CreditCardType", "CreditCardId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+
+namespace Backend.Server
+{
+    class Objects
+    {
+        [XmlRoot("LoginResponse", IsNullable = false)]
+        public class UserData
+        {
+            public int Id { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+        }
+        [XmlRoot("LoginResponse", IsNullable = false)]
+        public class Response
+        {
+            public string Value { get; set; }
+        }
+    }
+}

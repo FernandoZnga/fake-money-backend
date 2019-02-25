@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action.cs" />
+    <Compile Include="Objects.cs" />
     <Compile Include="ReadXml.cs" />
     <Compile Include="SocketConn.cs" />
     <Compile Include="Program.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Server.Designer.cs">
       <DependentUpon>Server.cs</DependentUpon>
     </Compile>
+    <Compile Include="XmlSerialization.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

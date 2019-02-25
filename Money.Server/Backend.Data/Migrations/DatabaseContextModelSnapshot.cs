@@ -40,6 +40,28 @@ namespace Backend.Data.Migrations
                     b.ToTable("CreditCards");
                 });
 
+            modelBuilder.Entity("Backend.Domain.CreditCardType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<int>("CreditCardId");
+
+                    b.Property<float>("Limit");
+
+                    b.Property<string>("Type");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreditCardId")
+                        .IsUnique();
+
+                    b.ToTable("CreditCardTypes");
+                });
+
             modelBuilder.Entity("Backend.Domain.RawData", b =>
                 {
                     b.Property<int>("Id")
@@ -77,6 +99,14 @@ namespace Backend.Data.Migrations
                     b.HasOne("Backend.Domain.User", "User")
                         .WithMany("CreditCards")
                         .HasForeignKey("UserId");
+                });
+
+            modelBuilder.Entity("Backend.Domain.CreditCardType", b =>
+                {
+                    b.HasOne("Backend.Domain.CreditCard", "CreditCard")
+                        .WithOne("CreditCardType")
+                        .HasForeignKey("Backend.Domain.CreditCardType", "CreditCardId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

@@ -12,13 +12,16 @@ namespace Backend.Server
     {
         private static readonly DatabaseContext _context = new DatabaseContext();
 
-        public bool InsertRawData(RawData rawData)
+        public static void InsertRawData(string xmlText)
         {
+            RawData rawData = new RawData()
+            {
+                XmlTextFromClient = xmlText
+            };
             using (var context = new DatabaseContext())
             {
                 context.RawText.Add(rawData);
                 context.SaveChanges();
-                return true;
             }
         }
     }

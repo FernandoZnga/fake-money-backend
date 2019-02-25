@@ -5,19 +5,34 @@ namespace Backend.Server
 {
     public class ReadXml
     {
+        public static string ccNumber, pinNumber, api;
+
         public static void Read(string xmlString)
         {
             xmlString = xmlString.Substring(0, xmlString.IndexOf("<EOF>", 0));
             XDocument xmlNode = XDocument.Parse(xmlString);
 
-            foreach (var element in xmlNode.Root.Elements())
+            foreach (var element in xmlNode.Elements())
             {
-                System.Console.WriteLine("1");
-                System.Console.WriteLine(element.Name);
-                foreach (var attribute in element.Descendants())
+                api = element.Name.ToString();
+                if (api == "LoginData")
                 {
-                    System.Console.WriteLine(attribute.Name);
-                    System.Console.WriteLine(attribute.Value);
+                    foreach (XElement xe in element.Descendants())
+                    {
+                        if (xe.Name == "CcNumber")
+                        {
+                            ccNumber = xe.Value.ToString();
+                        } else
+                        {
+                            pinNumber = xe.Value.ToString();
+                        }
+                        System.Console.WriteLine(xe.Name);
+                        System.Console.WriteLine(xe.Value);
+                        //ccNumber = xe.Element("CcNumber").Value;
+                        //pinNumber = xe.Element("PinNumber").Value;
+                    }
+                    System.Console.WriteLine(ccNumber);
+                    System.Console.WriteLine(pinNumber);
                 }
             }
         }

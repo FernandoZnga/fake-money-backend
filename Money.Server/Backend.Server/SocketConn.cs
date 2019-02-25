@@ -122,12 +122,7 @@ namespace Backend.Server
                         // All the data has been read from the   
                         // client. Display it on the console.  
                         Console.WriteLine("Read {0} bytes from socket. \n Data : {1}",content.Length, content);
-                        RawData rawData = new RawData
-                        {
-                            XmlTextFromClient = content
-                        };
-                        Action action = new Action();
-                        action.InsertRawData(rawData);
+                        Action.InsertRawData(content);
 
                         ReadXml.Read(content);
 
